@@ -10,11 +10,17 @@ def Up():
     kbd.Release([blr.x])
 
 def Down():
-    kbd.Press([ak.downArrow, blr.x])
+    kbd.Press([ak.downArrow])
+    time.sleep(0.1)
+    kbd.Press([blr.x])
+    time.sleep(0.1)
     kbd.Release([ak.downArrow, blr.x])
 
 def Left():
-    kbd.Press([ak.leftArrow, blr.x])
+    kbd.Press([ak.leftArrow])
+    time.sleep(0.1)
+    kbd.Press([blr.x])
+    time.sleep(0.1)
     kbd.Release([ak.leftArrow, blr.x])
 
 def LeftFor(duration):

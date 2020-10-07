@@ -13,6 +13,7 @@ from controllers.windowCtrl import WindowCtrl as wctrl
 import character.classScripts.kanna.blueMushroomForest as blueMushForestScript
 import character.classScripts.kanna.desertOfSerenity as desertOfSerenScript
 import character.classScripts.kanna.rockyRoad as rockyRoadScript
+import character.classScripts.kanna.refugeSouth1 as refugeSouth1
 import controllers.keyboardCtrlTest as kbd_test
 
 q = 0x10
@@ -35,7 +36,6 @@ v = 0x2F
 
 rightArrow = 0xCD
 leftArrow = 0xCB
-upArrow = 0xC8
 downArrow = 0xD0
 
 # Press the green button in the gutter to run the script.
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    rockyRoadScript.main()
+    refugeSouth1.main()
