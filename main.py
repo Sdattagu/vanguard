@@ -6,7 +6,7 @@
 import time
 import character.movement.teleport as tele
 import character.movement.jump as jump
-import character.movement.doubleJump as dbJump
+import character.movement.jump_db as dbJump
 import character.attack.teleAttack as ta
 from controllers.windowCtrl import WindowCtrl as wctrl
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    ta.Left()
-    time.sleep(1)
-    ta.Right()
+    jump.RightWithAttack()
+    time.sleep(0.5)
+    dbJump.RightWithAttack()
 
