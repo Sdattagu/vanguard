@@ -4,8 +4,9 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 import time
-import character.movement.walk as walk
+import character.movement.teleport as tele
 import character.movement.jump as jump
+import character.movement.doubleJump as dbJump
 from controllers.windowCtrl import WindowCtrl as wctrl
 
 q = 0x10
@@ -39,6 +40,5 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    jump.LeftFor(2)
 
 

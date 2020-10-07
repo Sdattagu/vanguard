@@ -1,4 +1,3 @@
-import time
 import controllers.keyboardCtrl as kbd
 import bindings.bottomLetterRow as blr
 import bindings.arrowKeys as ak
@@ -23,21 +22,10 @@ def Left():
 def InPlaceFor(duration):
     kbd.Hold(duration, [blr.x])
 
-
-def Right():
-    kbd.Press([blr.x, ak.rightArrow])
-    kbd.Release([blr.x, ak.rightArrow])
-
-
-def Left():
-    kbd.Press([blr.x, ak.leftArrow])
-    kbd.Release([blr.x, ak.leftArrow])
-
-
 def RightFor(duration):
     kbd.Hold(duration, [blr.x, ak.rightArrow])
-    kbd.Release(duration, [blr.x, ak.rightArrow])
+    kbd.Release([blr.x, ak.rightArrow])
 
 def LeftFor(duration):
     kbd.Hold(duration, [blr.x, ak.leftArrow])
-    kbd.Release(duration, [blr.x, ak.leftArrow])
+    kbd.Release([blr.x, ak.leftArrow])
