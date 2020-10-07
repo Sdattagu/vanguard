@@ -3,9 +3,11 @@ import bindings.arrowKeys as ak
 
 def walkRightFor(duration):
     kbd.Hold(duration, [ak.rightArrow])
+    kbd.Release([ak.rightArrow])
 
 def walkLeftFor(duration):
     kbd.Hold(duration, [ak.leftArrow])
+    kbd.Release([ak.leftArrow])
 
 def turnRight():
     kbd.Press(ak.rightArrow)

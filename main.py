@@ -39,6 +39,6 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    walk.walkLeftFor(2)
+    jump.LeftFor(2)
 
 

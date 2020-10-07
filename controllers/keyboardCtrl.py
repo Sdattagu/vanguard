@@ -63,7 +63,6 @@ def Hold(duration, keys=[]):
         for key in keys:
             press_key(key)
         time.sleep(0.1)
-    Release(keys)
 
 def Release(keys=[]):
     for key in keys:
