@@ -71,5 +71,4 @@ def Release(keys=[]):
 
 def Tap(keys=[]):
     Press(keys)
-    time.sleep(0.1)
     Release(keys)

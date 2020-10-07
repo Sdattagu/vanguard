@@ -7,10 +7,12 @@ import time
 import character.movement.teleport as tele
 import character.movement.jump as jump
 import character.movement.jump_db as dbJump
+import character.movement.upperRowAttack as ura
 from controllers.windowCtrl import WindowCtrl as wctrl
 
 import character.classScripts.kanna.blueMushroomForest as blueMushForestScript
 import character.classScripts.kanna.desertOfSerenity as desertOfSerenScript
+import character.classScripts.kanna.rockyRoad as rockyRoadScript
 import controllers.keyboardCtrlTest as kbd_test
 
 q = 0x10
@@ -44,4 +46,4 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-
+    rockyRoadScript.main()
