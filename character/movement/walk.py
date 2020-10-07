@@ -1,11 +1,11 @@
 import controllers.keyboardCtrl as kbd
 import bindings.arrowKeys as ak
 
-def walkRightFor(time):
-    kbd.Hold(ak.rightArrow, time)
+def walkRightFor(duration):
+    kbd.Hold(duration, [ak.rightArrow])
 
-def walkLeftFor(time):
-    kbd.Hold(ak.leftArrow, time)
+def walkLeftFor(duration):
+    kbd.Hold(duration, [ak.leftArrow])
 
 def turnRight():
     kbd.Press(ak.rightArrow)
