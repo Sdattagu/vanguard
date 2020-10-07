@@ -57,12 +57,13 @@ def Press(keys=[], numTimes=1):
         for key in keys:
             press_key(key)
         numTimes -= 1
-        time.sleep(0.5) #changed for dawn warrior attack delay. originally 0.1
+        time.sleep(0.1)
 
-def Hold(duration, key):
+def Hold(duration, keys=[]):
     t_end = time.time() + duration
     while time.time() < t_end:
-        press_key(key)
+        for key in keys:
+            press_key(key)
         time.sleep(0.1)
 
 def Release(keys=[]):

@@ -1,0 +1,7 @@
+left_shift = 0x2A
+left_ctrl = 0x1D
+left_alt = 0x38
+space = 0x39
+right_alt = 0xB8
+right_ctrl = 0x9D
+right_shift = 0x36
