@@ -33,3 +33,4 @@ class WindowCtrl:
     def set_active(self):
         print(self._handle)
         win32gui.BringWindowToTop(self._handle)
+

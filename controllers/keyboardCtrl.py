@@ -52,14 +52,20 @@ def release_key(hexKeyCode):
     x = Input(ctypes.c_ulong(1), ii_)
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
-def Press(key):
-    press_key(key) # press Q
-    time.sleep(.1)
-    release_key(key) #release Q
+def Press(keys=[]):
+    for key in keys:
+        press_key(key)
+    time.sleep(0.1)
 
-def Hold(key,duration):
+def Hold(duration, keys=[]):
     t_end = time.time() + duration
     while time.time() < t_end:
-        press_key(key)
-        time.sleep(0.2)
-    release_key(key)
+        for key in keys:
+            press_key(key)
+        time.sleep(0.1)
+    Release(keys)
+
+def Release(keys=[]):
+    for key in keys:
+        release_key(key)
+    time.sleep(0.1)
