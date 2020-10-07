@@ -17,12 +17,25 @@ def Left():
     kbd.Press([ak.leftArrow, blr.x])
     kbd.Release([ak.leftArrow, blr.x])
 
+def LeftFor(duration):
+    kbd.Hold(duration, [blr.x, ak.leftArrow])
+    kbd.Release([blr.x, ak.leftArrow])
+
+def LeftWithAttack():
+    kbd.Press([ak.leftArrow, blr.x])
+    time.sleep(0.1)
+    kbd.Press([mlr.a])
+    kbd.Release([ak.leftArrow, blr.x, mlr.a])
+
+def LeftWithAttackFor(duration):
+    t_end = time.time() + duration
+    while time.time() < t_end:
+        LeftWithAttack()
+        time.sleep(0.5)
+
 def Right():
     kbd.Press([ak.rightArrow, blr.x])
     kbd.Release([ak.rightArrow, blr.x])
-
-def InPlaceFor(duration):
-    kbd.Hold(duration, [blr.x])
 
 def RightFor(duration):
     kbd.Hold(duration, [blr.x, ak.rightArrow])
@@ -40,18 +53,7 @@ def RightWithAttackFor(duration):
         RightWithAttack()
         time.sleep(0.5)
 
-def LeftFor(duration):
-    kbd.Hold(duration, [blr.x, ak.leftArrow])
-    kbd.Release([blr.x, ak.leftArrow])
+def InPlaceFor(duration):
+    kbd.Hold(duration, [blr.x])
 
-def LeftWithAttack():
-    kbd.Press([ak.leftArrow, blr.x])
-    time.sleep(0.1)
-    kbd.Press([mlr.a])
-    kbd.Release([ak.leftArrow, blr.x, mlr.a])
 
-def LeftWithAttackFor(duration):
-    t_end = time.time() + duration
-    while time.time() < t_end:
-        LeftWithAttack()
-        time.sleep(0.5)

@@ -10,8 +10,8 @@ def LeftFor(duration):
     kbd.Release([ak.leftArrow])
 
 def turnRight():
-    kbd.Press(ak.rightArrow)
-    kbd.Release(ak.rightArrow)
+    kbd.Press([ak.rightArrow])
+    kbd.Release([ak.rightArrow])
 
 def turnLeft():
     kbd.Press([ak.leftArrow])

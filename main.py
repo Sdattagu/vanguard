@@ -7,8 +7,11 @@ import time
 import character.movement.teleport as tele
 import character.movement.jump as jump
 import character.movement.jump_db as dbJump
-import character.attack.teleAttack as ta
 from controllers.windowCtrl import WindowCtrl as wctrl
+
+import character.classScripts.kanna.blueMushroomForest as blueMushForestScript
+import character.classScripts.kanna.desertOfSerenity as desertOfSerenScript
+import controllers.keyboardCtrlTest as kbd_test
 
 q = 0x10
 w = 0x11
@@ -41,7 +44,4 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    jump.RightWithAttack()
-    time.sleep(0.5)
-    dbJump.RightWithAttack()
 
