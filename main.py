@@ -16,6 +16,11 @@ import character.classScripts.kanna.rockyRoad as rockyRoadScript
 import character.classScripts.kanna.refugeSouth1 as refugeSouth1
 import controllers.keyboardCtrlTest as kbd_test
 
+import controllers.keyboardCtrl as kbd
+import bindings.bottomLetterRow as blr
+import bindings.bottomFnRow as bfr
+import bindings.arrowKeys as ak
+
 q = 0x10
 w = 0x11
 e = 0x12
@@ -46,4 +51,12 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    refugeSouth1.main()
+    try:
+        # for iteration in range(20):
+        while True:
+            refugeSouth1.main()
+    except KeyboardInterrupt:
+        print("1")
+        for key in [bfr.left_ctrl, blr.c, ak.leftArrow, ak.rightArrow]:
+            kbd.Release([key])
+            time.sleep(0.1)
