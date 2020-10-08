@@ -37,7 +37,7 @@ def LeftWithAttackFor(duration):
     t_end = time.time() + duration
     while time.time() < t_end:
         LeftWithAttack()
-        time.sleep(0.5)
+        time.sleep(0.6)
 
 def Right():
     kbd.Press([ak.rightArrow, blr.x])
@@ -57,7 +57,7 @@ def RightWithAttackFor(duration):
     t_end = time.time() + duration
     while time.time() < t_end:
         RightWithAttack()
-        time.sleep(0.5)
+        time.sleep(0.6)
 
 def InPlaceFor(duration):
     kbd.Hold(duration, [blr.x])

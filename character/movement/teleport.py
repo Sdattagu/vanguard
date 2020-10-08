@@ -18,6 +18,13 @@ def UpWithJump():
     time.sleep(0.1)
     kbd.Release([ak.upArrow, blr.c, blr.x])
 
+def Down():
+    kbd.Press([ak.downArrow])
+    time.sleep(0.2)
+    kbd.Press([blr.c])
+    time.sleep(0.1)
+    kbd.Release([ak.downArrow, blr.c])
+
 def Right():
     kbd.Press([ak.rightArrow, blr.c])
     kbd.Release([ak.rightArrow, blr.c])

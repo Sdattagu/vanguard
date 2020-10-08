@@ -14,6 +14,8 @@ import character.classScripts.kanna.blueMushroomForest as blueMushForestScript
 import character.classScripts.kanna.desertOfSerenity as desertOfSerenScript
 import character.classScripts.kanna.rockyRoad as rockyRoadScript
 import character.classScripts.kanna.refugeSouth1 as refugeSouth1
+import character.classScripts.kanna.aboveTheCave as aboveTheCave
+import character.classScripts.nightLord.hiddenUndergroundTrain as hiddenUndergroundTrain
 import controllers.keyboardCtrlTest as kbd_test
 
 import controllers.keyboardCtrl as kbd
@@ -51,12 +53,6 @@ if __name__ == '__main__':
     w.set_active()
     time.sleep(1)
     ##### Tests here ######
-    try:
-        # for iteration in range(20):
-        while True:
-            refugeSouth1.main()
-    except KeyboardInterrupt:
-        print("1")
-        for key in [bfr.left_ctrl, blr.c, ak.leftArrow, ak.rightArrow]:
-            kbd.Release([key])
-            time.sleep(0.1)
+    for iteration in range(1):
+        print("Starting iteration: ", iteration+1)
+        hiddenUndergroundTrain.main()
