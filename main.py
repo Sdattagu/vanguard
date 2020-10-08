@@ -22,9 +22,20 @@ import bindings.bottomLetterRow as blr
 import bindings.bottomFnRow as bfr
 import bindings.arrowKeys as ak
 
+import keyboard
+
+def killer():
+    raise KeyboardInterrupt
+
+keyboard.add_hotkey('ctrl+shift+s', killer)
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     ##### Tests here ######
     print("Entering")
-    escTest.main()
-    print("Back to pycharm.")
+    print("In app window...")
+    w = wctrl()
+    w.find_window_wildcard(".*Notepad.*")
+    w.set_foreground()
+    w.set_active()
+
