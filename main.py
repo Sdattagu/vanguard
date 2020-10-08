@@ -14,6 +14,7 @@ import character.classScripts.kanna.blueMushroomForest as blueMushForestScript
 import character.classScripts.kanna.desertOfSerenity as desertOfSerenScript
 import character.classScripts.kanna.rockyRoad as rockyRoadScript
 import character.classScripts.kanna.refugeSouth1 as refugeSouth1
+import keyTests.escapeProcessTest as escTest
 import controllers.keyboardCtrlTest as kbd_test
 
 import controllers.keyboardCtrl as kbd
@@ -21,42 +22,9 @@ import bindings.bottomLetterRow as blr
 import bindings.bottomFnRow as bfr
 import bindings.arrowKeys as ak
 
-q = 0x10
-w = 0x11
-e = 0x12
-r = 0x13
-t = 0x14
-y = 0x15
-
-a = 0x1E
-s = 0x1F
-d = 0x20
-f = 0x21
-g = 0x22
-
-z = 0x2C
-x = 0x2D
-c = 0x2E
-v = 0x2F
-
-rightArrow = 0xCD
-leftArrow = 0xCB
-downArrow = 0xD0
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    w = wctrl()
-    w.find_window_wildcard(".*MapleStory.*")
-    w.set_foreground()
-    w.set_active()
-    time.sleep(1)
     ##### Tests here ######
-    try:
-        # for iteration in range(20):
-        while True:
-            refugeSouth1.main()
-    except KeyboardInterrupt:
-        print("1")
-        for key in [bfr.left_ctrl, blr.c, ak.leftArrow, ak.rightArrow]:
-            kbd.Release([key])
-            time.sleep(0.1)
+    print("Entering")
+    escTest.main()
+    print("Back to pycharm.")

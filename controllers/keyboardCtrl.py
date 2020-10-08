@@ -52,6 +52,8 @@ def release_key(hexKeyCode):
     x = Input(ctypes.c_ulong(1), ii_)
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
+
+
 def Press(keys=[]):
     for key in keys:
         press_key(key)
