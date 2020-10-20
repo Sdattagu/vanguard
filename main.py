@@ -4,7 +4,17 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Press the green button in the gutter to run the script.
+import time
+
+import controllers.windowCtrl as wctrl
+import character.classScripts.kanna.kishinScript as kishScript
+import character.classScripts.phantom.buffScript as buffScript
 
 if __name__ == '__main__':
-    img = cv2.imread('C:\\Users\\Sho\\Pictures\\testopencv.jpg')
-    height, width, channels = img.shape
+    w = wctrl.WindowCtrl()
+    w.find_window_wildcard(".*MapleStory.*")
+    w.set_foreground()
+    w.set_active()
+    time.sleep(2)
+    buffScript.main()
+
